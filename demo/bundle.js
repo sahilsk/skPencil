@@ -1000,7 +1000,7 @@ function initSKPencil() {
 	pencil.brushStyle.stroke = "blue";	
 	
 	pencil.on("path", function(path){
-		console.log("new path added" );
+		console.log("new path added. : ", path );
 	});
 	pencil.on("started", function(pos){
 		console.log("client started at ", pos );
@@ -1014,6 +1014,8 @@ function initSKPencil() {
 },{"../skPencil":7}],7:[function(require,module,exports){
 var util = require("util");
 var events = require("events");
+
+
 var Pencil = function (opts) {
 	events.EventEmitter.call(this);
     var defaults = {
@@ -1045,6 +1047,7 @@ var Pencil = function (opts) {
         'stroke-width': '4px'
     };
 }
+module.exports = Pencil;
 util.inherits(Pencil, events.EventEmitter);
 
 Pencil.prototype.setWhiteboard = function( element){
@@ -1090,10 +1093,12 @@ Pencil.prototype.draw = function(){
 		console.log("onMouseMove: ", ev.offsetX, ev.offsetY);
 	}
 	var onMouseUp = function (ev) {
+		if( !ctxt_pencil.path) return ;
 		if (ctxt_pencil.lPts.length === 0) {
 			ctxt_pencil.svg.removeChild(ctxt_pencil.path);
-		}else
+		}else{
 			ctxt_pencil.emit("path", { mPt : ctxt_pencil.mPt, lPts: ctxt_pencil.lPts, brushStyle : ctxt_pencil.brushStyle} );
+		}
 		ctxt_pencil.emit("stopped", ctxt_pencil.lPts[ctxt_pencil.lPts.length - 1]);
 		ctxt_pencil.path = null;
 		ctxt_pencil.mPt = "";
@@ -1101,9 +1106,9 @@ Pencil.prototype.draw = function(){
 		console.log("onMouseUp: ", ev.offsetX, ev.offsetY);
 		
 	}	
-    this.whiteboard.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mousemove', onMouseMove);
     this.whiteboard.addEventListener('mousedown', onMouseDown);
-    this.whiteboard.addEventListener('mouseup', onMouseUp);	
+    window.addEventListener('mouseup', onMouseUp);	
 	
     console.log("skPencil is ready to go.");
 }
@@ -1120,7 +1125,6 @@ Pencil.prototype.addPath = function(path){
 	this.svg.appendChild(pathNode);
 }
 
-module.exports = Pencil;
 
 
 },{"events":1,"util":5}]},{},[6])

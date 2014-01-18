@@ -22,7 +22,7 @@ function initSKPencil() {
 	pencil.brushStyle.stroke = "blue";	
 	
 	pencil.on("path", function(path){
-		console.log("new path added" );
+		console.log("new path added. : ", path );
 	});
 	pencil.on("started", function(pos){
 		console.log("client started at ", pos );
