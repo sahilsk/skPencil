@@ -41,10 +41,11 @@ Play with pencil.brushStyle object to add or remove default style.
 	
 eg. To add red color , 10px wide brush 
 	
-		``` js
-			pencil.brushStyle.stroke = "red";
-			pencil.brushStyle.stroke-width = "10px";
-		```
+``` js
+
+	pencil.brushStyle.stroke = "red";
+	pencil.brushStyle.stroke-width = "10px";
+```
 		
 ## Events 
 
