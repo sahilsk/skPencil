@@ -50,6 +50,16 @@ Include this bundle.js in html and have happy drawing.
 	*path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
 			one can use to simulate online whiteboard for collaborative drawing.
 		
-	
+	```js
+		pencil.on("path", function(path){
+		console.log("new path added. : ", path );
+	});
+	pencil.on("started", function(pos){
+		console.log("client started at ", pos );
+	});
+	pencil.on("stopped", function(pos){
+		console.log("client stopped at ", pos );
+	});	
+	```
 	
 	
