@@ -25,11 +25,12 @@ Now in your client side javascript instantiate pencil object
         'stroke-width': '4px'
     };
 	pencil.brushStyle.stroke = "blue";	
-``` js
+``` 
 
 ### Don't forget to browserify your client code to run it at browser side.
+
 ``` js
-browserify client.js -o bundle.js
+	browserify client.js -o bundle.js
 ```
 
 Include this bundle.js in html and have happy drawing.
