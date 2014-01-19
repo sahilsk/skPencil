@@ -1,7 +1,8 @@
 skPencil
 ========
 
-SVG Pencil experiment (mimicking mad scientist )
+SVG Pencil experiment (mimicking mad scientist ). 
+A simple node module to create svg pencil.
 
 
 ##USAGE
