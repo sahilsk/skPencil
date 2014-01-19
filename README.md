@@ -4,12 +4,26 @@ skPencil
 SVG Pencil experiment (mimicking mad scientist )
 
 
-##Documentation
+##USAGE
 
-In HTML file
+One example is provided inside demo folder enclosing client.js file showing skPencil usage.
+
+In HTML file, make sure you define one ID to your whiteboard
 ``` js
  <div id="whiteboard"> </div>
 ```
+
+Apply few css to this whiteboard
+
+``` css
+	     #whiteboard {
+			border: 2px solid purple;
+			width: 700px;
+			height: 500px;
+			cursor: crosshair;
+        }	
+```
+
 
 Now in your client side javascript instantiate pencil object
 
