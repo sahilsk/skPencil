@@ -12,7 +12,7 @@ In HTML file
 
 Now in your client side javascript :
 
-''' js
+``` js
 	// .../client.js
 	var Pencil = require("./skPencil");
 	var pencil = new Pencil();
@@ -24,7 +24,7 @@ Now in your client side javascript :
         'stroke-width': '4px'
     };
 	pencil.brushStyle.stroke = "blue";	
-'''	
+``` js
 
 ### Don't forget to browserify your client code to run it at browser side.
 ''' js
