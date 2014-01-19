@@ -68,7 +68,7 @@ Different are fired by your pencil. These are
 * started : When drawing begin triggered by mousedown event 
 * stopped : when drawing stopped triggered by mouseup event
 * path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
-			one can use to simulate online whiteboard for collaborative drawing.
+			one can use to simulate [online whiteboard](https://github.com/sahilsk/skWhiteboard  "skWhiteboard") for collaborative drawing.
 		
 ``` js
 	pencil.on("path", function(path){
@@ -82,4 +82,4 @@ Different are fired by your pencil. These are
 	});	
 ```
 	
-	
+#### Simple online whiteboard using skPencil is skwhiteboard: https://github.com/sahilsk/skWhiteboard
