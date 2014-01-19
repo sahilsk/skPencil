@@ -7,10 +7,11 @@ SVG Pencil experiment (mimicking mad scientist )
 ##Documentation
 
 In HTML file
-...
+``` js
  <div id="whiteboard"> </div>
+```
 
-Now in your client side javascript :
+Now in your client side javascript instantiate pencil object
 
 ``` js
 	// .../client.js
@@ -27,7 +28,8 @@ Now in your client side javascript :
 ``` js
 
 ### Don't forget to browserify your client code to run it at browser side.
-''' js
+``` js
 browserify client.js -o bundle.js
-'''
+```
+
 Include this bundle.js in html and have happy drawing.
