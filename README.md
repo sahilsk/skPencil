@@ -45,7 +45,8 @@ eg. To add red color , 10px wide brush
 			pencil.brushStyle.stroke = "red";
 			pencil.brushStyle.stroke-width = "10px";
 		```
-##Events 
+		
+## Events 
 
 Different are fired by your pencil. These are
 *started : When drawing begin triggered by mousedown event 
@@ -53,9 +54,9 @@ Different are fired by your pencil. These are
 *path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
 			one can use to simulate online whiteboard for collaborative drawing.
 		
-	``` js
-		pencil.on("path", function(path){
-		console.log("new path added. : ", path );
+``` js
+	pencil.on("path", function(path){
+	console.log("new path added. : ", path );
 	});
 	pencil.on("started", function(pos){
 		console.log("client started at ", pos );
@@ -63,6 +64,6 @@ Different are fired by your pencil. These are
 	pencil.on("stopped", function(pos){
 		console.log("client stopped at ", pos );
 	});	
-	```
+```
 	
 	
