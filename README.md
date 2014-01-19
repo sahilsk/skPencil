@@ -17,7 +17,7 @@ Now in your client side javascript instantiate pencil object
 	// .../client.js
 	var Pencil = require("./skPencil");
 	var pencil = new Pencil();
-	pencil.setWhiteboard( <strong>"whiteboard" </strong> );
+	pencil.setWhiteboard( <em>"whiteboard" </em> );
 	pencil.draw();
 	pencil.brushStyle = {
         'fill': 'none',
@@ -34,3 +34,16 @@ Now in your client side javascript instantiate pencil object
 ```
 
 Include this bundle.js in html and have happy drawing.
+
+## Styling
+	Play with pencil.brushStyle object to add or remove default style.
+	
+	To add red color , 10px wide brush 
+		```js
+		pencil.brushStyle.stroke = "red";
+		pencil.brushStyle.stroke-width = "10px";
+		```
+	
+	
+	
+	
