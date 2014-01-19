@@ -36,21 +36,24 @@ Now in your client side javascript instantiate pencil object
 Include this bundle.js in html and have happy drawing.
 
 ## Styling
-	Play with pencil.brushStyle object to add or remove default style.
+
+Play with pencil.brushStyle object to add or remove default style.
 	
-	To add red color , 10px wide brush 
-		```js
-		pencil.brushStyle.stroke = "red";
-		pencil.brushStyle.stroke-width = "10px";
+eg. To add red color , 10px wide brush 
+	
+		``` js
+			pencil.brushStyle.stroke = "red";
+			pencil.brushStyle.stroke-width = "10px";
 		```
 ##Events 
-	Different are fired by your pencil. These are
-	*started : When drawing begin triggered by mousedown event 
-	*stopped : when drawing stopped triggered by mouseup event
-	*path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
+
+Different are fired by your pencil. These are
+*started : When drawing begin triggered by mousedown event 
+*stopped : when drawing stopped triggered by mouseup event
+*path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
 			one can use to simulate online whiteboard for collaborative drawing.
 		
-	```js
+	``` js
 		pencil.on("path", function(path){
 		console.log("new path added. : ", path );
 	});
