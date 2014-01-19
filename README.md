@@ -17,7 +17,7 @@ Now in your client side javascript instantiate pencil object
 	// .../client.js
 	var Pencil = require("./skPencil");
 	var pencil = new Pencil();
-	pencil.setWhiteboard( <em>"whiteboard" </em> );
+	pencil.setWhiteboard( *"whiteboard"* );
 	pencil.draw();
 	pencil.brushStyle = {
         'fill': 'none',
@@ -49,9 +49,9 @@ eg. To add red color , 10px wide brush
 ## Events 
 
 Different are fired by your pencil. These are
-*started : When drawing begin triggered by mousedown event 
-*stopped : when drawing stopped triggered by mouseup event
-*path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
+* started : When drawing begin triggered by mousedown event 
+* stopped : when drawing stopped triggered by mouseup event
+* path: when a stroke applied on canvas (mousedown->mouseup). It give svg path node which
 			one can use to simulate online whiteboard for collaborative drawing.
 		
 ``` js
